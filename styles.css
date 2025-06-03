@@ -10,26 +10,31 @@ nav {
     top: 0;
     width: 100%;
     background-color: #333;
-    padding: 1rem;
+    padding: 1.5rem;
     z-index: 1000;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 2rem;
+    padding-left: 2rem;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: all 0.3s;
+    padding: 0.5rem 1rem;
+    border: 2px solid #ffa500;
+    border-radius: 4px;
 }
 
 nav a:hover {
-    color: #ffa500;
+    color: #333;
+    background-color: #ffa500;
 }
 
 section {
