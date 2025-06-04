@@ -159,10 +159,14 @@ p {
 
 .leadership-cards {
     display: grid;
+<<<<<<< HEAD
     grid-template-columns: repeat(4, minmax(250px, 1fr));
+=======
+    grid-template-columns: repeat(3, minmax(350px, 1fr));
+>>>>>>> 89cc7d211ee184310dd18e66a4f274bab78abb5f
     gap: 2rem;
     margin: 4rem auto;
-    max-width: 1600px;
+    max-width: 1400px;
     padding: 0 2rem;
 }
 
@@ -175,7 +179,13 @@ p {
     position: relative;
     height: 400px;
     width: 100%;
+<<<<<<< HEAD
     min-width: 250px;
+=======
+    min-width: 350px;
+    max-width: 420px;
+    margin: 0 auto;
+>>>>>>> 89cc7d211ee184310dd18e66a4f274bab78abb5f
 }
 
 .leadership-card:hover {
