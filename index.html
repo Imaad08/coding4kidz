@@ -3,31 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Club</title>
+    <title>Coding4Kidz</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Itim">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <nav>
-        <img src="logo text.png" alt="Coding Club Logo" class="logo">
+        <img src="Logo Text.png" alt="Coding4Kidz Logo" class="logo">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#programs">Programs</a></li>
+            <li><a href="#leadership">Leadership</a></li>
+            <li><a href="#branches">Branches</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <section id="home" class="grey-section">
         <div class="content">
-            <h1>Welcome to Our Coding Club</h1>
-            <p>Join us on an exciting journey into the world of programming!</p>
+            <h1>Welcome to Coding4Kidz</h1>
+            <p>Introducing coding to younger students so they can be better prepared for the growing technological field.</p>
+            <a href="#signup" class="cta-button">Join Us</a>
         </div>
     </section>
 
     <section id="about" class="orange-section">
         <div class="content">
             <h1>About Us</h1>
-            <p>We are a community of passionate coders dedicated to learning and growing together. Our club provides a supportive environment for both beginners and experienced programmers.</p>
+            <p>Coding4Kidz is a non-profit organization created at Del Norte High School with the mission to teach kids basic coding and introduce them to the STEM field. Our sessions typically last about 2 months and cover Scratch, Python, and Java programming.</p>
+            <div class="mission-statement">
+                <h2>Mission Statement</h2>
+                <p>"We created Coding4Kidz to introduce coding to younger students so that they can be better prepared for the growing technological field."</p>
+            </div>
         </div>
     </section>
 
@@ -47,17 +61,6 @@
                     </ul>
                 </div>
                 <div class="program-card">
-                    <img src="roblox.png" alt="Roblox Logo" class="program-image">
-                    <h2>Roblox Lua</h2>
-                    <p>Build and program your own Roblox games! Learn Lua scripting to create interactive 3D experiences.</p>
-                    <ul class="program-features">
-                        <li>Lua programming basics</li>
-                        <li>3D game design</li>
-                        <li>Multiplayer game mechanics</li>
-                        <li>Roblox Studio tools</li>
-                    </ul>
-                </div>
-                <div class="program-card">
                     <img src="scratch.png" alt="Scratch Logo" class="program-image">
                     <h2>Scratch</h2>
                     <p>Perfect for beginners! Learn programming concepts through visual block-based coding.</p>
@@ -68,6 +71,93 @@
                         <li>Creative animations</li>
                     </ul>
                 </div>
+                <div class="program-card">
+                    <img src="roblox.png" alt="Roblox Logo" class="program-image">
+                    <h2>Roblox Lua</h2>
+                    <p>Build and program your own Roblox games! Learn Lua scripting to create interactive 3D experiences.</p>
+                    <ul class="program-features">
+                        <li>Lua programming basics</li>
+                        <li>3D game design</li>
+                        <li>Multiplayer game mechanics</li>
+                        <li>Roblox Studio tools</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leadership" class="orange-section">
+        <div class="content">
+            <h1>Our Leadership Team</h1>
+            <div class="leadership-cards">
+                <div class="leadership-card">
+                    <div class="card-front">
+                        <img src="c4k/images/dnhsmembers/abhijay.jpg" alt="Abhijay Deevi">
+                        <h3>Tanav Kambhampati</h3>
+                        <p>Co-President</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Tanav Kambhampati</h3>
+                        <p>Del Norte High School Class of2026</p>
+                        <p>Co-President</p>
+                    </div>
+                </div>
+                <div class="leadership-card">
+                    <div class="card-front">
+                        <img src="c4k/images/dnhsmembers/imaad2.png" alt="Kevin Do">
+                        <h3>Imaad Muzaffer</h3>
+                        <p>Co-President</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Imaad Muzaffer</h3>
+                        <p>Del Norte High School Class of 2026</p>
+                        <p>Co-President</p>
+                    </div>
+                </div>
+                <div class="leadership-card">
+                    <div class="card-front">
+                        <img src="c4k/images/dnhsmembers/pranav.jpg" alt="Pranav Kambhampati">
+                        <h3>Sri Surapaneni</h3>
+                        <p>Vice President</p>
+                    </div>
+                    <div class="card-back">
+                        <h3>Sri Surapaneni</h3>
+                        <p>Del Norte High School Class of 2026</p>
+                        <p>Vice President</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="branches" class="grey-section">
+        <div class="content">
+            <h1>Our Branches</h1>
+            <div class="branch-cards">
+                <div class="branch-card">
+                    <h3>Del Norte High School</h3>
+                    <p>Presidents: Imaad Muzaffer & Tanav Kambhampati</p>
+                    <a href="mailto:codingkids20@gmail.com" class="branch-link">Contact Us</a>
+                </div>
+                <div class="branch-card">
+                    <h3>Canyon Crest Academy</h3>
+                    <p>President: Rajdeep Singh</p>
+                </div>
+                <div class="branch-card">
+                    <h3>Mount Carmel High School</h3>
+                    <p>President: Sravya Chittuluri</p>
+                </div>
+                <div class="branch-card">
+                    <h3>Westview High School</h3>
+                    <p>Coming Soon</p>
+                </div>
+                <div class="branch-card">
+                    <h3>Rancho Bernardo High School</h3>
+                    <p>Coming Soon</p>
+                </div>
+            </div>
+            <div class="branch-cta">
+                <a href="https://docs.google.com/forms/u/4/d/e/1FAIpQLSfLYv0UpnEPyhvb02XK3IabqGT8xsM9jewVE5LNXfpmeXtADw/viewform" class="cta-button">Start a Branch</a>
             </div>
         </div>
     </section>
@@ -75,8 +165,36 @@
     <section id="contact" class="orange-section">
         <div class="content">
             <h1>Contact Us</h1>
-            <p>Ready to join? Reach out to us and become part of our coding community!</p>
+            <p>Ready to join? Sign up for our next session!</p>
+            <div class="contact-buttons">
+                <a href="http://bit.ly/c4k-signup-s2" class="cta-button">Sign Up Form</a>
+                <a href="c4k/images/flyers/c4k-s3.jpg" class="cta-button">View Flyer</a>
+            </div>
         </div>
     </section>
+
+    <section id="signup" class="grey-section">
+        <div class="content">
+            <h1>Join Coding4Kidz</h1>
+            <p>Sessions: ~ 2 months</p>
+            <p>Coding for Kidz is a club that was created in Del Norte High School. The main goal of this club and non-profit organization is to teach kids basic coding and introduce them to the STEM field.</p>
+            <ul class="program-features">
+                <li>Class times vary between branches</li>
+                <li>Sessions last about 2 months (varies by branch)</li>
+                <li>Main Syllabus: Scratch, Python, Java</li>
+                <li>Additional topics may be offered at specific branches</li>
+            </ul>
+            <div class="contact-buttons">
+                <a href="http://bit.ly/c4k-signup-s2" class="cta-button">Sign Up Form</a>
+                <a href="c4k/images/flyers/c4k-s3.jpg" class="cta-button">View Flyer</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright © 2024 Coding4Kidz</p>
+        <p>501(c) registered, approval pending</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
