@@ -3,189 +3,702 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding4Kidz</title>
+    <title>Coding4Kidz - Empowering Young Minds</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Itim">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Coding4Kidz teaches programming to kids through engaging programs like PyGame, Scratch, and Roblox. Join our non-profit organization to start your coding journey!">
+    <meta name="keywords" content="coding for kids, programming classes, Scratch, PyGame, Roblox, computer science education, kids coding, youth programming">
+    <meta name="author" content="Coding4Kidz">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Coding4Kidz - Learn Programming, Build the Future">
+    <meta property="og:description" content="Coding4Kidz teaches programming to kids through engaging programs like PyGame, Scratch, and Roblox.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://coding4kidz.org">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="c4k-legacy-images/images/c4k.png">
 </head>
 <body>
-    <nav>
+    <!-- Coding Background Animations -->
+    <div class="coding-bg-animation" id="coding-bg"></div>
+    
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
         <img src="Logo Text.png" alt="Coding4Kidz Logo" class="logo">
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#programs" class="nav-link">Programs</a>
+                <a href="#leadership" class="nav-link">Leadership</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </div>
         </div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#programs">Programs</a></li>
-            <li><a href="#leadership">Leadership</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
     </nav>
 
-    <section id="home" class="grey-section">
-        <div class="content">
-            <h2>WEBSITE STILL UNDER CONSTRUCTION</h2>
-            <h1>Welcome to Coding4Kidz</h1>
-            <p>Introducing coding to younger students so they can be better prepared for the growing technological field.</p>
-            <a href="#signup" class="cta-button">Join Us</a>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-gradient"></div>
+                    <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+        
+        <!-- Cool Personal Touch: Floating Code Elements -->
+        <div class="floating-code-elements">
+            <div class="code-bubble bubble-1">console.log("Hello World!");</div>
+            <div class="code-bubble bubble-2">while(learning) { fun++; }</div>
+            <div class="code-bubble bubble-3">if(coding) { awesome = true; }</div>
+            <div class="code-bubble bubble-4">print("Welcome to C4K!")</div>
+            <div class="code-bubble bubble-5">function dream() { return reality; }</div>
+        </div>
+        
+        <!-- Shooting Stars Effect -->
+        <div class="shooting-stars">
+            <div class="star star-1"></div>
+            <div class="star star-2"></div>
+            <div class="star star-3"></div>
+        </div>
+        
+        <!-- Sparkle Effects -->
+        <div class="magic-sparkles">
+            <div class="sparkle-dot"></div>
+            <div class="sparkle-dot"></div>
+            <div class="sparkle-dot"></div>
+            <div class="sparkle-dot"></div>
+            <div class="sparkle-dot"></div>
+            <div class="sparkle-dot"></div>
+        </div>
+            <!-- Particles System -->
+            <div class="particles" id="particles"></div>
+            <!-- Matrix Rain Effect -->
+            <div class="matrix-rain" id="matrix-rain"></div>
+        </div>
+        
+        <!-- Animated Terminals -->
+        <div class="animated-terminals">
+            <!-- Python Terminal -->
+            <div class="terminal-window terminal-python terminal-1">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <div class="terminal-button close"></div>
+                        <div class="terminal-button minimize"></div>
+                        <div class="terminal-button maximize"></div>
+                    </div>
+                    <div class="terminal-title">python_tutorial.py</div>
+                </div>
+                <div class="terminal-content">
+                    <div class="terminal-prompt">>>> </div>
+                    <div class="terminal-line" data-delay="800">
+                        <span class="code-keyword">import</span> pygame
+                    </div>
+                    <div class="terminal-line" data-delay="1600">
+                        <span class="code-keyword">class</span> <span class="code-function">GameSprite</span>:
+                    </div>
+                    <div class="terminal-line" data-delay="2400">
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">def</span> <span class="code-function">__init__</span>(self):
+                    </div>
+                    <div class="terminal-line" data-delay="3200">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.x = <span class="code-keyword">100</span>
+                    </div>
+                    <div class="terminal-line" data-delay="4000">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">print</span>(<span class="code-string">"Game created!"</span>)
+                    </div>
+                    <div class="terminal-line" data-delay="4800">
+                        <span class="code-comment"># Building awesome games! 🎮</span><span class="typing-cursor">|</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- JavaScript Terminal -->
+            <div class="terminal-window terminal-js terminal-2">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <div class="terminal-button close"></div>
+                        <div class="terminal-button minimize"></div>
+                        <div class="terminal-button maximize"></div>
+                    </div>
+                    <div class="terminal-title">game_development.js</div>
+                </div>
+                <div class="terminal-content">
+                    <div class="terminal-prompt">$ node app.js</div>
+                    <div class="terminal-line" data-delay="1200">
+                        <span class="code-keyword">function</span> <span class="code-function">createPlayer</span>() {
+                    </div>
+                    <div class="terminal-line" data-delay="2000">
+                        &nbsp;&nbsp;<span class="code-keyword">let</span> player = {
+                    </div>
+                    <div class="terminal-line" data-delay="2800">
+                        &nbsp;&nbsp;&nbsp;&nbsp;health: <span class="code-keyword">100</span>,
+                    </div>
+                    <div class="terminal-line" data-delay="3600">
+                        &nbsp;&nbsp;&nbsp;&nbsp;level: <span class="code-keyword">1</span>,
+                    </div>
+                    <div class="terminal-line" data-delay="4400">
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-function">attack</span>() {
+                    </div>
+                    <div class="terminal-line" data-delay="5200">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.<span class="code-function">log</span>(<span class="code-string">"Player attacks! ⚔️"</span>);
+                    </div>
+                    <div class="terminal-line" data-delay="6000">
+                        &nbsp;&nbsp;&nbsp;&nbsp;}
+                    </div>
+                    <div class="terminal-line" data-delay="6800">
+                        &nbsp;&nbsp;};
+                    </div>
+                    <div class="terminal-line" data-delay="7600">
+                        &nbsp;&nbsp;<span class="code-keyword">return</span> player;<span class="typing-cursor">|</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scratch/Block Coding Terminal -->
+            <div class="terminal-window terminal-scratch terminal-3">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <div class="terminal-button close"></div>
+                        <div class="terminal-button minimize"></div>
+                        <div class="terminal-button maximize"></div>
+                    </div>
+                    <div class="terminal-title">scratch_blocks.sb3</div>
+                </div>
+                <div class="terminal-content">
+                    <div class="terminal-prompt">[Scratch Project: Space Adventure]</div>
+                    <div class="terminal-line" data-delay="1400">
+                        🏁 <span class="code-block">when green flag clicked</span>
+                    </div>
+                    <div class="terminal-line" data-delay="2200">
+                        🚀 <span class="code-block">set size to 50%</span>
+                    </div>
+                    <div class="terminal-line" data-delay="3000">
+                        🔄 <span class="code-block">forever</span>
+                    </div>
+                    <div class="terminal-line" data-delay="3800">
+                        &nbsp;&nbsp;⌨️ <span class="code-block">if key space pressed</span>
+                    </div>
+                    <div class="terminal-line" data-delay="4600">
+                        &nbsp;&nbsp;&nbsp;&nbsp;🎵 <span class="code-block">play sound laser</span>
+                    </div>
+                    <div class="terminal-line" data-delay="5400">
+                        &nbsp;&nbsp;&nbsp;&nbsp;✨ <span class="code-block">create clone of bullet</span>
+                    </div>
+                    <div class="terminal-line" data-delay="6200">
+                        💬 <span class="code-block">say "Pew pew! 💥"</span><span class="typing-cursor">|</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CLI Effect -->
+            <div class="cli-effect">
+                <div>$ git clone https://github.com/coding4kidz/awesome-projects.git</div>
+                <div>$ cd awesome-projects</div>
+                <div>$ python run_my_game.py</div>
+                <div style="color: #f8ac54;">🎮 Game launched! Score: 9999</div>
+                <div style="color: #4caf50;">✓ Future coder in the making!</div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-text">🚀 Now Enrolling for 2024</span>
+            </div>
+            <div class="coding4kidz-logo">
+                <h1 class="brand-name">Coding4Kidz</h1>
+                <div class="brand-tagline">Where Young Minds Learn to Code</div>
+            </div>
+            <h2 class="hero-title">
+                <span class="title-line gradient-text typing-animation">Learn to Code<span class="terminal-cursor"></span></span>
+                <span class="title-line gradient-text">Build the Future.</span>
+            </h2>
+            <p class="hero-subtitle">
+                Introducing coding to younger students so they can be better prepared 
+                for the growing technological field through hands-on learning and creative projects.
+            </p>
+            <div class="hero-buttons">
+                <a href="#signup" class="btn btn-primary">
+                    <span>Join Our Program</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#about" class="btn btn-secondary">
+                    <span>Learn More</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat stat-slide-left" data-count="500">
+                    <div class="stat-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-plus">+</div>
+                    <div class="stat-label">Students Taught</div>
+                    <div class="stat-bg-effect"></div>
+                </div>
+                <div class="stat stat-slide-up" data-count="50">
+                    <div class="stat-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-plus">+</div>
+                    <div class="stat-label">Programs Run</div>
+                    <div class="stat-bg-effect"></div>
+                </div>
+                <div class="stat stat-slide-right" data-count="5">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-number" data-target="5">0</div>
+                    <div class="stat-plus"></div>
+                    <div class="stat-label">Years Experience</div>
+                    <div class="stat-bg-effect"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span class="scroll-text">Scroll to explore</span>
         </div>
     </section>
 
-    <section id="about" class="orange-section">
-        <div class="content">
-            <h1>About Us</h1>
+    <!-- Section Divider 1 -->
+    <div class="section-divider divider-wave">
+        <svg class="wave-svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill-1"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill-2"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill-3"></path>
+        </svg>
+        <div class="divider-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <div class="section-badge">About Us</div>
+                <h2 class="section-title">Our Mission</h2>
+                <p class="section-subtitle">
+                    Building the next generation of tech leaders through accessible, 
+                    engaging, and comprehensive coding education.
+                </p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="text-block">
+                        <h3>Who We Are</h3>
             <p>Coding4Kidz is a non-profit organization created at Del Norte High School with the mission to teach kids basic coding and introduce them to the STEM field. Our sessions typically last about 2 months and cover Scratch, Python, and Java programming.</p>
-            <div class="mission-statement">
-                <h2>Mission Statement</h2>
-                <p>"We created Coding4Kidz to introduce coding to younger students so that they can be better prepared for the growing technological field."</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="programs" class="grey-section">
-        <div class="content">
-            <h1>Our Programs</h1>
-            <div class="program-cards">
-                <div class="program-card">
-                    <img src="pygame.png" alt="PyGame Logo" class="program-image">
-                    <h2>PyGame</h2>
-                    <p>Learn game development with Python and PyGame! Create your own 2D games while learning programming fundamentals.</p>
-                    <ul class="program-features">
-                        <li>Basic Python programming</li>
-                        <li>Game mechanics and physics</li>
-                        <li>Graphics and animation</li>
-                        <li>Sound and music integration</li>
-                    </ul>
-                </div>
-                <div class="program-card">
-                    <img src="scratch.png" alt="Scratch Logo" class="program-image">
-                    <h2>Scratch</h2>
-                    <p>Perfect for beginners! Learn programming concepts through visual block-based coding.</p>
-                    <ul class="program-features">
-                        <li>Visual programming</li>
-                        <li>Interactive stories</li>
-                        <li>Simple games</li>
-                        <li>Creative animations</li>
-                    </ul>
-                </div>
-                <div class="program-card">
-                    <img src="roblox.png" alt="Roblox Logo" class="program-image">
-                    <h2>Roblox Lua</h2>
-                    <p>Build and program your own Roblox games! Learn Lua scripting to create interactive 3D experiences.</p>
-                    <ul class="program-features">
-                        <li>Lua programming basics</li>
-                        <li>3D game design</li>
-                        <li>Multiplayer game mechanics</li>
-                        <li>Roblox Studio tools</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="leadership" class="orange-section">
-        <div class="content">
-            <h1>Our Leadership Team</h1>
-            <div class="leadership-cards">
-                <div class="leadership-card">
-                    <div class="card-front">
-                        <div class="leadership-img-wrapper">
-                            <img src="c4k-legacy-images/images/dnhsmembers/abhijay.jpg" alt="Abhijay Deevi">
+                    </div>
+                    
+                    <div class="about-features">
+                        <div class="feature-card animate-slide-left">
+                            <div class="feature-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h4>Passionate Teaching</h4>
+                            <p>Our instructors are dedicated students who genuinely care about sharing their love for coding</p>
                         </div>
-                        <h3>Tanav Kambhampati</h3>
-                        <p>Co-President</p>
-                    </div>
-                    <div class="card-back">
-                        <h3>Tanav Kambhampati</h3>
-                        <p>Del Norte High School Class of2026</p>
-                        <p>Co-President</p>
-                    </div>
-                </div>
-                <div class="leadership-card">
-                    <div class="card-front">
-                        <div class="leadership-img-wrapper">
-                            <img src="c4k-legacy-images/images/dnhsmembers/imaad2.png" alt="Kevin Do">
+                        
+                        <div class="feature-card animate-fade-in">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>Small Classes</h4>
+                            <p>Personalized attention with low student-to-teacher ratios</p>
                         </div>
-                        <h3>Imaad Muzaffer</h3>
-                        <p>Co-President</p>
-                    </div>
-                    <div class="card-back">
-                        <h3>Imaad Muzaffer</h3>
-                        <p>Del Norte High School Class of 2026</p>
-                        <p>Co-President</p>
-                    </div>
-                </div>
-                <div class="leadership-card">
-                    <div class="card-front">
-                        <div class="leadership-img-wrapper">
-                            <img src="c4k-legacy-images/images/dnhsmembers/pranav.jpg" alt="Pranav Kambhampati">
+                        
+                        <div class="feature-card animate-slide-right">
+                            <div class="feature-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <h4>Hands-on Projects</h4>
+                            <p>Build real projects that showcase your newfound skills</p>
                         </div>
-                        <h3>Sri Surapaneni</h3>
-                        <p>Vice President</p>
-                    </div>
-                    <div class="card-back">
-                        <h3>Sri Surapaneni</h3>
-                        <p>Del Norte High School Class of 2026</p>
-                        <p>Vice President</p>
                     </div>
                 </div>
                 
-                <div class="leadership-card">
-                    <div class="card-front">
-                        <div class="leadership-img-wrapper">
-                            <img src="c4k-legacy-images/images/dnhsmembers/pranav.jpg" alt="Pranav Kambhampati">
-                        </div>
-                        <h3>Sai Talisetty</h3>
-                        <p>Vice President</p>
+                <div class="mission-card animate-scale">
+                    <div class="mission-icon">
+                        <i class="fas fa-quote-left"></i>
                     </div>
-                    <div class="card-back">
-                        <h3>Sai Talisetty</h3>
-                        <p>Del Norte High School Class of 2026</p>
-                        <p>Vice President</p>
+                    <blockquote>
+                        "Our mission is to democratize programming education, making it accessible, 
+                        engaging, and inspiring for young learners everywhere. We believe that 
+                        coding is not just about writing code—it's about problem-solving, 
+                        creativity, and building the tools to shape our digital future."
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider 2 -->
+    <div class="section-divider divider-gradient">
+        <div class="gradient-line"></div>
+        <div class="floating-icons">
+            <i class="fas fa-code"></i>
+            <i class="fas fa-laptop-code"></i>
+            <i class="fas fa-terminal"></i>
+            <i class="fas fa-bug"></i>
+            <i class="fas fa-cogs"></i>
+        </div>
+    </div>
+
+    <!-- Programs Section -->
+    <section id="programs" class="programs-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <div class="section-badge">Our Programs</div>
+                <h2 class="section-title">Choose Your Path</h2>
+                <p class="section-subtitle">
+                    From visual programming to game development, we offer diverse 
+                    pathways to ignite your coding journey.
+                </p>
+            </div>
+            
+            <div class="programs-grid">
+                <div class="program-card animate-slide-left" data-program="pygame">
+                    <div class="program-header">
+                        <div class="program-icon">
+                            <img src="pygame.png" alt="PyGame Logo">
+                        </div>
+                        <div class="program-badge">Advanced</div>
+                    </div>
+                    <div class="program-content">
+                        <h3>PyGame Development</h3>
+                    <p>Learn game development with Python and PyGame! Create your own 2D games while learning programming fundamentals.</p>
+                    <ul class="program-features">
+                            <li><i class="fas fa-check"></i>Basic Python programming</li>
+                            <li><i class="fas fa-check"></i>Game mechanics and physics</li>
+                            <li><i class="fas fa-check"></i>Graphics and animation</li>
+                            <li><i class="fas fa-check"></i>Sound and music integration</li>
+                    </ul>
+                    </div>
+                    <div class="program-footer">
+                        <div class="program-duration">8 weeks</div>
+                        <div class="program-level">Ages 12-16</div>
+                    </div>
+                </div>
+                
+                <div class="program-card featured animate-scale glow-effect" data-program="scratch">
+                    <div class="program-header">
+                        <div class="program-icon">
+                            <img src="scratch.png" alt="Scratch Logo">
+                        </div>
+                        <div class="program-badge">Beginner</div>
+                    </div>
+                    <div class="program-content">
+                        <h3>Scratch Programming</h3>
+                    <p>Perfect for beginners! Learn programming concepts through visual block-based coding.</p>
+                    <ul class="program-features">
+                            <li><i class="fas fa-check"></i>Visual programming</li>
+                            <li><i class="fas fa-check"></i>Interactive stories</li>
+                            <li><i class="fas fa-check"></i>Simple games</li>
+                            <li><i class="fas fa-check"></i>Creative animations</li>
+                    </ul>
+                    </div>
+                    <div class="program-footer">
+                        <div class="program-duration">6 weeks</div>
+                        <div class="program-level">Ages 8-12</div>
+                    </div>
+                </div>
+                
+                <div class="program-card animate-slide-right" data-program="roblox">
+                    <div class="program-header">
+                        <div class="program-icon">
+                            <img src="roblox.png" alt="Roblox Logo">
+                        </div>
+                        <div class="program-badge">Intermediate</div>
+                    </div>
+                    <div class="program-content">
+                        <h3>Roblox Lua</h3>
+                    <p>Build and program your own Roblox games! Learn Lua scripting to create interactive 3D experiences.</p>
+                    <ul class="program-features">
+                            <li><i class="fas fa-check"></i>Lua programming basics</li>
+                            <li><i class="fas fa-check"></i>3D game design</li>
+                            <li><i class="fas fa-check"></i>Multiplayer game mechanics</li>
+                            <li><i class="fas fa-check"></i>Roblox Studio tools</li>
+                    </ul>
+                    </div>
+                    <div class="program-footer">
+                        <div class="program-duration">10 weeks</div>
+                        <div class="program-level">Ages 10-14</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Section Divider 3 -->
+    <div class="section-divider divider-zigzag">
+        <svg class="zigzag-svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0 L40,80 L80,0 L120,80 L160,0 L200,80 L240,0 L280,80 L320,0 L360,80 L400,0 L440,80 L480,0 L520,80 L560,0 L600,80 L640,0 L680,80 L720,0 L760,80 L800,0 L840,80 L880,0 L920,80 L960,0 L1000,80 L1040,0 L1080,80 L1120,0 L1160,80 L1200,0 L1200,120 L0,120 Z" class="zigzag-fill"></path>
+        </svg>
+        <div class="bouncing-dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
 
-
-    <section id="contact" class="orange-section">
-        <div class="content">
-            <h1>Contact Us</h1>
-            <p>Ready to join? Sign up for our next session!</p>
-            <div class="contact-buttons">
-                <a href="http://bit.ly/c4k-signup-s2" class="cta-button">Sign Up Form</a>
-                <a href="c4k/images/flyers/c4k-s3.jpg" class="cta-button">View Flyer</a>
+    <!-- Leadership Section -->
+    <section id="leadership" class="leadership-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <div class="section-badge">Meet the Team</div>
+                <h2 class="section-title">Our Leadership</h2>
+                <p class="section-subtitle">
+                    Passionate high school students dedicated to making coding 
+                    accessible and fun for everyone.
+                </p>
+            </div>
+            
+            <div class="leadership-grid">
+                <div class="leader-card animate-slide-left">
+                    <div class="leader-image">
+                        <img src="c4k-legacy-images/images/dnhsmembers/abhijay.jpg" alt="Tanav Kambhampati">
+                        <div class="leader-overlay">
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leader-info">
+                        <h3>Tanav Kambhampati</h3>
+                        <p class="leader-role">Co-President</p>
+                        <p class="leader-school">Del Norte High School Class of 2026</p>
+                        <p class="leader-bio">Passionate about making technology accessible to young learners and fostering a love for programming in the next generation.</p>
+                    </div>
+                </div>
+                
+                <div class="leader-card animate-slide-right">
+                    <div class="leader-image">
+                        <img src="c4k-legacy-images/images/dnhsmembers/imaad2.png" alt="Imaad Muzaffer">
+                        <div class="leader-overlay">
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leader-info">
+                        <h3>Imaad Muzaffer</h3>
+                        <p class="leader-role">Co-President</p>
+                        <p class="leader-school">Del Norte High School Class of 2026</p>
+                        <p class="leader-bio">Dedicated to creating engaging learning experiences that inspire students to explore the world of computer science.</p>
+                    </div>
+                </div>
+                
+                <div class="leader-card animate-slide-left">
+                    <div class="leader-image">
+                        <img src="c4k-legacy-images/images/dnhsmembers/pranav.jpg" alt="Sri Surapaneni">
+                        <div class="leader-overlay">
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leader-info">
+                        <h3>Sri Surapaneni</h3>
+                        <p class="leader-role">Vice President</p>
+                        <p class="leader-school">Del Norte High School Class of 2026</p>
+                        <p class="leader-bio">Enthusiastic about fostering creativity through code and helping students discover their potential in technology.</p>
+                    </div>
+                </div>
+                
+                <div class="leader-card animate-slide-right">
+                    <div class="leader-image">
+                        <img src="c4k-legacy-images/images/dnhsmembers/pranav.jpg" alt="Sai Talisetty">
+                        <div class="leader-overlay">
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leader-info">
+                        <h3>Sai Talisetty</h3>
+                        <p class="leader-role">Vice President</p>
+                        <p class="leader-school">Del Norte High School Class of 2026</p>
+                        <p class="leader-bio">Committed to inspiring the next generation of programmers and building a supportive community for young coders.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="signup" class="grey-section">
-        <div class="content">
-            <h1>Join Coding4Kidz</h1>
-            <p>Sessions: ~ 2 months</p>
-            <p>Coding for Kidz is a club that was created in Del Norte High School. The main goal of this club and non-profit organization is to teach kids basic coding and introduce them to the STEM field.</p>
-            <ul class="program-features">
-                <li>Class times vary between branches</li>
-                <li>Sessions last about 2 months (varies by branch)</li>
-                <li>Main Syllabus: Scratch, Python, Java</li>
-                <li>Additional topics may be offered at specific branches</li>
-            </ul>
-            <div class="contact-buttons">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSf0lAbVWAY7wcDwbd6vvSHJqugAxHgUmoTf-chFUIn9aMK3Aw/viewform" class="cta-button">Sign Up Form</a>
-                <a href="c4k/images/flyers/c4k-s3.jpg" class="cta-button">View Flyer</a>
+    <!-- Section Divider 4 -->
+    <div class="section-divider divider-pulse">
+        <div class="pulse-rings">
+            <div class="pulse-ring"></div>
+            <div class="pulse-ring"></div>
+            <div class="pulse-ring"></div>
+        </div>
+        <div class="divider-text">
+            <span>Ready to Start?</span>
+        </div>
+        <div class="sparkles">
+            <div class="sparkle"></div>
+            <div class="sparkle"></div>
+            <div class="sparkle"></div>
+            <div class="sparkle"></div>
+            <div class="sparkle"></div>
+            <div class="sparkle"></div>
+        </div>
+    </div>
+
+    <!-- Contact & Signup Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <div class="section-badge">Get Started</div>
+                <h2 class="section-title">Ready to Begin?</h2>
+                <p class="section-subtitle">
+                    Join hundreds of students who have already started their coding journey with us.
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info scroll-reveal-left">
+                    <h3>Program Details</h3>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Duration:</strong>
+                                <span>Sessions last about 2 months</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-code"></i>
+                            <div>
+                                <strong>Curriculum:</strong>
+                                <span>Scratch, Python, Java, and more</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-users-cog"></i>
+                            <div>
+                                <strong>Class Size:</strong>
+                                <span>Small groups for personalized attention</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Location:</strong>
+                                <span>Multiple branches available</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-actions scroll-reveal-right">
+                    <div class="action-card primary animate-slide-left">
+                        <h4>🚀 Start Learning Today</h4>
+                        <p>Ready to begin your coding adventure? Choose from our beginner-friendly programs and start building amazing projects!</p>
+                        <a href="#programs" class="btn btn-primary">
+                            <i class="fas fa-play"></i>
+                            View Programs
+                        </a>
+                    </div>
+                    
+                    <div class="action-card animate-slide-right">
+                        <h4>💬 Have Questions?</h4>
+                        <p>Not sure which program is right for you? We're here to help you find the perfect starting point for your coding journey.</p>
+                        <a href="mailto:info@coding4kidz.org" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i>
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Newsletter Signup -->
+        <div class="newsletter-section scroll-reveal">
+            <div class="newsletter-content">
+                <h3>Stay Updated</h3>
+                <p>Get notified about new programs, events, and coding tips!</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" class="email-input">
+                    <button class="btn btn-primary">Subscribe</button>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>Copyright © 2024 Coding4Kidz</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="Logo Text.png" alt="Coding4Kidz Logo" class="footer-logo">
+                    <p>Empowering young minds through technology education.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Programs</h4>
+                        <a href="#programs">Scratch</a>
+                        <a href="#programs">PyGame</a>
+                        <a href="#programs">Roblox Lua</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>About</h4>
+                        <a href="#about">Our Mission</a>
+                        <a href="#leadership">Leadership</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Connect</h4>
+                        <a href="#">Instagram</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Coding4Kidz. All rights reserved.</p>
         <p>501(c) registered, approval pending</p>
+            </div>
+        </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
